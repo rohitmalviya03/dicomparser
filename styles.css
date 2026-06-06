@@ -50,6 +50,10 @@ body {
   letter-spacing: 0.08em;
 }
 
+.eyebrow.dark {
+  color: #1d4ed8;
+}
+
 h1,
 h2,
 p {
@@ -341,6 +345,64 @@ button {
   text-align: center;
 }
 
+.feedback-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 18px;
+  border: 1px solid #d9e2ef;
+  border-radius: 16px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.feedback-card h2 {
+  font-size: 24px;
+}
+
+.feedback-card p:not(.eyebrow) {
+  margin-top: 8px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.feedback-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.feedback-card label {
+  display: grid;
+  gap: 6px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.feedback-card input,
+.feedback-card select,
+.feedback-card textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 11px;
+  padding: 11px 12px;
+  color: #111827;
+  font: inherit;
+  outline: none;
+}
+
+.feedback-card textarea {
+  resize: vertical;
+}
+
+.feedback-card input:focus,
+.feedback-card select:focus,
+.feedback-card textarea:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
 .site-footer {
   display: flex;
   gap: 10px;
@@ -362,7 +424,8 @@ button {
   }
 
   .hero,
-  .workspace {
+  .workspace,
+  .feedback-card {
     grid-template-columns: 1fr;
   }
 

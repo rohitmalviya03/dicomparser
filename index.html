@@ -155,6 +155,38 @@
           </section>
         </section>
       </section>
+      <section class="feedback-card">
+        <div>
+          <p class="eyebrow dark">FEEDBACK</p>
+          <h2>Help improve this DICOM parser</h2>
+          <p>Share bugs, missing DICOM tags, feature ideas, or compressed image support requests.</p>
+        </div>
+        <form name="dicom-feedback" method="POST" netlify>
+          <input type="hidden" name="form-name" value="dicom-feedback">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="you@example.com">
+          </label>
+          <label>
+            Feedback type
+            <select name="type">
+              <option value="Bug report">Bug report</option>
+              <option value="Feature request">Feature request</option>
+              <option value="DICOM tag request">DICOM tag request</option>
+              <option value="General feedback">General feedback</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Tell me what should be improved..." required></textarea>
+          </label>
+          <button type="submit">Send Feedback</button>
+        </form>
+      </section>
       <footer class="site-footer">
         <strong>DICOM Parser Online</strong>
         <span>Free browser-based DICOM viewer and metadata tag reader for local DICOM files. This tool is for technical review and is not a diagnostic medical viewer.</span>
