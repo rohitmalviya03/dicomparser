@@ -11,6 +11,8 @@ const resetViewButton = document.getElementById("resetViewButton");
 const statusBadge = document.getElementById("statusBadge");
 const warnings = document.getElementById("warnings");
 const previewDetails = document.getElementById("previewDetails");
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabPanels = document.querySelectorAll(".tab-panel");
 
 const patientName = document.getElementById("patientName");
 const patientId = document.getElementById("patientId");
@@ -26,6 +28,15 @@ let lastFileName = "dicom-metadata";
 
 function setStatus(text) {
   statusBadge.textContent = text;
+}
+
+function activateTab(tabId) {
+  tabButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.tab === tabId);
+  });
+  tabPanels.forEach((panel) => {
+    panel.classList.toggle("active", panel.id === tabId);
+  });
 }
 
 function escapeHtml(value) {
@@ -204,3 +215,6 @@ resetViewButton.addEventListener("click", () => {
   canvas.style.width = "";
 });
 tagSearch.addEventListener("input", applyTagFilter);
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => activateTab(button.dataset.tab));
+});

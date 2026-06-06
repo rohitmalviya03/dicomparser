@@ -65,6 +65,12 @@
         </div>
       </section>
 
+      <nav class="tabs" aria-label="DICOM parser sections">
+        <button class="tab-button active" type="button" data-tab="homePanel">Home</button>
+        <button class="tab-button" type="button" data-tab="feedbackPanel">Feedback</button>
+      </nav>
+
+      <section id="homePanel" class="tab-panel active">
       <section class="workspace">
         <aside class="side-panel">
           <section id="dropZone" class="drop-zone">
@@ -155,6 +161,8 @@
           </section>
         </section>
       </section>
+      </section>
+      <section id="feedbackPanel" class="tab-panel">
       <section class="feedback-card">
         <div>
           <p class="eyebrow dark">FEEDBACK</p>
@@ -186,6 +194,7 @@
           </label>
           <button type="submit">Send Feedback</button>
         </form>
+      </section>
       </section>
       <footer class="site-footer">
         <strong>DICOM Parser Online</strong>

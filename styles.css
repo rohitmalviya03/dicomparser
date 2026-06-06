@@ -110,6 +110,35 @@ h2 {
   align-items: start;
 }
 
+.tabs {
+  display: inline-flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  border: 1px solid #d9e2ef;
+  border-radius: 14px;
+  padding: 6px;
+  background: #ffffff;
+}
+
+.tab-button {
+  min-width: 120px;
+  background: transparent;
+  color: #475569;
+}
+
+.tab-button.active {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
 .side-panel,
 .main-panel {
   display: grid;
