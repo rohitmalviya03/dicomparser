@@ -28,6 +28,20 @@ body {
   background: linear-gradient(135deg, #111827, #1d4ed8);
 }
 
+.brand-lockup {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.brand-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.28);
+}
+
 .eyebrow {
   margin: 0 0 8px;
   color: #bfdbfe;
@@ -335,6 +349,16 @@ button {
   .hero,
   .workspace {
     grid-template-columns: 1fr;
+  }
+
+  .brand-lockup {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .brand-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
   }
 
   .viewer {

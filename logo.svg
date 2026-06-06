@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">DICOM Parser Logo</title>
+  <desc id="desc">A medical image frame with scan lines and DICOM tag brackets.</desc>
+  <defs>
+    <linearGradient id="bg" x1="12" y1="14" x2="116" y2="114" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="36" y1="33" x2="92" y2="91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="24" width="70" height="84" rx="12" fill="#eff6ff" opacity=".96"/>
+  <path d="M42 44h42M42 57h42M42 70h27M42 83h36" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="56" y="34" width="54" height="54" rx="12" fill="#0f172a" stroke="#93c5fd" stroke-width="4"/>
+  <path d="M68 70c8-26 20-26 28 0M70 76h24" stroke="url(#scan)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M21 47 12 64l9 17M107 47l9 17-9 17" stroke="#bfdbfe" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
