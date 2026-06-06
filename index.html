@@ -3,9 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DICOM Web Reader</title>
+    <title>DICOM Parser Online | DICOM Image Viewer and Tag Metadata Reader</title>
+    <meta name="description" content="Free browser-based DICOM parser and image viewer. Read DICOM tags, inspect metadata, preview uncompressed grayscale DICOM images, and export metadata as JSON.">
+    <meta name="keywords" content="DICOM parser, DICOM viewer, DICOM metadata reader, DICOM tag viewer, DICOM image viewer, DICOM file reader, medical image parser, DICOM online tool">
+    <meta name="author" content="Rohit Malviya">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rohitmalviya03.github.io/dicomparser/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DICOM Parser Online">
+    <meta property="og:description" content="Open local DICOM files in your browser, inspect DICOM tag metadata, and preview uncompressed grayscale medical images.">
+    <meta property="og:image" content="https://rohitmalviya03.github.io/dicomparser/logo.svg">
+    <meta property="og:url" content="https://rohitmalviya03.github.io/dicomparser/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DICOM Parser Online">
+    <meta name="twitter:description" content="A browser-based DICOM image viewer and metadata tag parser.">
+    <meta name="theme-color" content="#1d4ed8">
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "DICOM Parser Online",
+        "applicationCategory": "MedicalApplication",
+        "operatingSystem": "Any",
+        "description": "Browser-based DICOM parser and image viewer for reading DICOM tag metadata and previewing uncompressed grayscale DICOM images.",
+        "url": "https://rohitmalviya03.github.io/dicomparser/",
+        "creator": {
+          "@type": "Person",
+          "name": "Rohit Malviya"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "DICOM metadata parser",
+          "DICOM tag viewer",
+          "Uncompressed grayscale DICOM image preview",
+          "JSON metadata export",
+          "Private DICOM tag labeling"
+        ]
+      }
+    </script>
   </head>
   <body>
     <main class="app-shell">
@@ -114,6 +155,10 @@
           </section>
         </section>
       </section>
+      <footer class="site-footer">
+        <strong>DICOM Parser Online</strong>
+        <span>Free browser-based DICOM viewer and metadata tag reader for local DICOM files. This tool is for technical review and is not a diagnostic medical viewer.</span>
+      </footer>
     </main>
     <script src="dicom-parser.js"></script>
     <script src="app.js"></script>
