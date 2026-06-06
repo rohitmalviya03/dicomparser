@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DICOM Web Reader</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">DICOM WEB READER</p>
+          <h1>DICOM image and tag parser</h1>
+          <p class="subtext">Open a local DICOM file, preview uncompressed grayscale images, and inspect tags with clear names, VR, length, and values. Files stay in your browser.</p>
+        </div>
+        <div class="status-card">
+          <span>Status</span>
+          <b id="statusBadge">Ready</b>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="side-panel">
+          <section id="dropZone" class="drop-zone">
+            <input id="fileInput" type="file" accept=".dcm,application/dicom">
+            <strong>Select DICOM file</strong>
+            <span>or drag a .dcm file here</span>
+          </section>
+
+          <section class="summary">
+            <div>
+              <span>Patient</span>
+              <b id="patientName">-</b>
+            </div>
+            <div>
+              <span>Patient ID</span>
+              <b id="patientId">-</b>
+            </div>
+            <div>
+              <span>Modality</span>
+              <b id="modality">-</b>
+            </div>
+            <div>
+              <span>Study Date</span>
+              <b id="studyDate">-</b>
+            </div>
+            <div>
+              <span>Manufacturer</span>
+              <b id="manufacturer">-</b>
+            </div>
+            <div>
+              <span>Image Size</span>
+              <b id="imageSize">-</b>
+            </div>
+            <div>
+              <span>Transfer Syntax</span>
+              <b id="transferSyntax">-</b>
+            </div>
+          </section>
+
+          <section id="warnings" class="warnings" hidden></section>
+        </aside>
+
+        <section class="main-panel">
+          <section class="viewer-card">
+            <div class="section-head">
+              <div>
+                <h2>Image Preview</h2>
+                <p id="previewDetails">Uncompressed grayscale preview appears here.</p>
+              </div>
+              <button id="resetViewButton" type="button">Reset View</button>
+            </div>
+            <div class="viewer">
+              <canvas id="imageCanvas"></canvas>
+              <div id="emptyPreview">Load a DICOM file to preview image data.</div>
+            </div>
+          </section>
+
+          <section class="tag-card">
+            <div class="section-head">
+              <div>
+                <h2>DICOM Tags</h2>
+                <p id="tagCount">0 tags parsed</p>
+              </div>
+              <div class="actions">
+                <button id="copyButton" type="button">Copy JSON</button>
+                <button id="downloadButton" type="button">Download JSON</button>
+              </div>
+            </div>
+            <input id="tagSearch" class="tag-search" type="search" placeholder="Search tag key, name, VR, or value">
+            <div class="tag-table-wrap">
+              <table class="tag-table">
+                <thead>
+                  <tr>
+                    <th>Tag Key</th>
+                    <th>Tag Name</th>
+                    <th>VR</th>
+                    <th>Length</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody id="tagTableBody">
+                  <tr>
+                    <td colspan="5" class="empty-tags">Load a DICOM file to inspect tags.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="dicom-parser.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
