@@ -47,6 +47,38 @@
         ]
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can this web app open DICOM files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. DICOM Parser Online can open local .dcm files in the browser, parse common DICOM Part 10 metadata, and display tags in a searchable table."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can it preview DICOM images?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It can preview uncompressed grayscale DICOM images. Compressed transfer syntaxes such as JPEG, JPEG-LS, JPEG2000, and RLE need decoder libraries before image preview can be supported."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this a diagnostic medical viewer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. This is a technical DICOM metadata parser and lightweight image preview tool. It is not intended for clinical diagnosis or medical decision-making."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <main class="app-shell">
@@ -195,6 +227,52 @@
           <button type="submit">Send Feedback</button>
         </form>
       </section>
+      </section>
+      <section class="seo-content" aria-labelledby="seo-title">
+        <div>
+          <p class="eyebrow dark">DICOM VIEWER GUIDE</p>
+          <h2 id="seo-title">Free online DICOM parser and web viewer</h2>
+          <p>DICOM Parser Online is a browser-based DICOM web viewer for reading local medical imaging files. You can open a `.dcm` file, inspect DICOM metadata, search DICOM tags, and preview uncompressed grayscale images without uploading patient data to a server.</p>
+        </div>
+
+        <div class="seo-grid">
+          <article>
+            <h3>What is a DICOM parser?</h3>
+            <p>A DICOM parser reads the structure of a DICOM file and extracts tag information such as Patient Name, Patient ID, Modality, Study Date, Series Description, Pixel Spacing, Rows, Columns, Bits Allocated, Transfer Syntax UID, and Pixel Data.</p>
+          </article>
+          <article>
+            <h3>DICOM tag viewer</h3>
+            <p>The tag table shows the tag key, tag name, VR, length, and value. You can search by tag number like `(0010,0010)`, tag name like Patient Name, modality values like CT or MR, or private creator names such as GE private tags.</p>
+          </article>
+          <article>
+            <h3>Private DICOM tags</h3>
+            <p>Many scanner vendors store extra information in private tags. This tool labels private creator blocks where possible, so GE, MR, image acquisition, and scanner-specific tags are easier to identify during technical review.</p>
+          </article>
+          <article>
+            <h3>Local privacy-first viewer</h3>
+            <p>The DICOM file is processed locally in your browser. The app is designed for technical metadata inspection and does not require file upload, login, server storage, or cloud processing.</p>
+          </article>
+        </div>
+
+        <div class="faq-list">
+          <h2>DICOM parser FAQ</h2>
+          <details open>
+            <summary>Can this web app open DICOM files?</summary>
+            <p>Yes. Select or drag a `.dcm` file into the app. It parses common DICOM Part 10 metadata and displays tags in a searchable table.</p>
+          </details>
+          <details>
+            <summary>Can it preview DICOM images?</summary>
+            <p>It can preview uncompressed grayscale DICOM images. Compressed transfer syntaxes such as JPEG, JPEG-LS, JPEG2000, and RLE need decoder libraries before image preview can be supported.</p>
+          </details>
+          <details>
+            <summary>Is this a diagnostic medical viewer?</summary>
+            <p>No. This is a technical DICOM metadata parser and lightweight image preview tool. It is not intended for clinical diagnosis or medical decision-making.</p>
+          </details>
+          <details>
+            <summary>Which DICOM metadata can I inspect?</summary>
+            <p>You can inspect patient, study, series, image, acquisition, pixel, transfer syntax, and private tag metadata when those tags are present in the file.</p>
+          </details>
+        </div>
       </section>
       <footer class="site-footer">
         <strong>DICOM Parser Online</strong>

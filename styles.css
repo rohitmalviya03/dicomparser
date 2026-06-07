@@ -432,6 +432,65 @@ button {
   box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
 }
 
+.seo-content {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+  border: 1px solid #d9e2ef;
+  border-radius: 16px;
+  padding: 22px;
+  background: #ffffff;
+}
+
+.seo-content h2 {
+  font-size: 26px;
+}
+
+.seo-content p {
+  margin-top: 8px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.seo-grid article {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+  background: #f8fafc;
+}
+
+.seo-grid h3,
+.faq-list h2 {
+  margin: 0;
+}
+
+.seo-grid h3 {
+  font-size: 16px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-list details {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.faq-list summary {
+  color: #111827;
+  font-weight: 850;
+  cursor: pointer;
+}
+
 .site-footer {
   display: flex;
   gap: 10px;
@@ -454,7 +513,8 @@ button {
 
   .hero,
   .workspace,
-  .feedback-card {
+  .feedback-card,
+  .seo-grid {
     grid-template-columns: 1fr;
   }
 
